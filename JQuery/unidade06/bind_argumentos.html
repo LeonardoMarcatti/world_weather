@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        
+        <style>
+			#janela { border:1px solid #666; width:200px; height:200px; margin-top:10px }
+		</style>
+        
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+            $(function (e) {
+                /*$('#botaovermelho').click(function () {
+                    $('#janela').css('background-color', 'red');
+                });
+                $('#botaoazul').click(function () {
+                    $('#janela').css('background-color', 'blue');
+                });
+                $('#botaoverde').bind('click', function() {
+                    $('#janela').css('background-color', 'green');
+                });*/
+
+                function aplicarCores(a) {
+                    var cor = a.data.b;
+                    $('#janela').css('background-color', cor);
+                };
+
+                $('#botaoazul').bind('click', {b: 'blue'}, aplicarCores);
+                $('#botaovermelho').bind('click', {b: 'red'}, aplicarCores);
+                $('#botaoverde').bind('click', {b: 'green'}, aplicarCores);
+            });
+	 	</script>        
+    </head> 
+    <body>
+    	<input type="submit" id="botaoazul" value="azul" style="">
+        <input type="submit" id="botaovermelho" value="vermelho">
+        <input type="submit" id="botaoverde" value="verde">
+        
+        <div id="janela"></div>
+    </body>
+</html>

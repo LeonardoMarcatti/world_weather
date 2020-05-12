@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso HTML5 Essencial</title>
+        <link href="css/estilo.css" rel="stylesheet" media="screen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="mostrar_resultado()">
+        <main>
+            <h2>Formulário</h2>
+            <form action="destino.php" method="post" autocomplete="on" name="myform" enctype="multipart/form-data">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" size="40" maxlength="40" autofocus="" placeholder="Seu Nome" required="">
+
+                <label for="senha" style="float: left;">Senha:</label>
+                <input type="password" name="senha" id="senha" size="10" maxlength="15" style="clear: left; float: left;" placeholder="Sua senha" required="">
+
+                <label for="senha2" style="margin: 0px 0px 0px 115px;">Repita sua senha:</label>
+                <input type="password" name="senha2" id="senha2" size="10" maxlength="15" placeholder="Repita senha" required="" style="margin: 0px 0px 10px 150px;"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" size="30" maxlength="60" required="">
+
+                <label for="site">Site:</label>
+                <input type="url" name="site" id="site" size="30" maxlength="60" placeholder="www.seusite.com.br">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" size="20" maxlength="30" placeholder="(XX)XXXXX-XXXX">
+
+                <label  for="valor_a" style="float: left; margin-right: 5px;">Valor A</label>
+                <input  type="checkbox" name="valor_a" id="valor_a" style="float: left; margin-right: 0px; margin-top: 0px;">
+
+                <label  for="valor_b" style="float: left; margin-left: 50px; margin-right: 5px;">Valor B</label>
+                <input  type="checkbox" name="valor_b" id="valor_b" style="margin-left: 5px; float: left; margin-top: 0px;">
+
+                <label  for="valor_c" style="float: left; margin-left: 50px; margin-right: 5px;">Valor C</label>
+                <input  type="checkbox" name="valor_c" id="valor_c" style="margin-left: 160px;"><br>                    
+                    
+                <label for="sim" style="float: left; margin-right: 5px; margin-top: 0px;">Sim</label>
+                <input type="radio" name="pgto" id="sim" style="float: left; margin-right: 10px;">
+
+                <label for="nao" style="float: left; margin-right: 5px;">Não</label>
+                <input type="radio" name="pgto" id="nao">
+
+                <div style="float: left;">
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" id="numero" min="0" max="50" value="0" width="5">
+                </div>
+
+                <div style="margin-left: 100px; float: left;">
+                    <label for="estadoID">Estado</label><br>
+                    <select name="estadoID" id="estadoID">
+                        <option value="0" selected="">Escolha um Estado</option>
+                        <option value="1" >Rio de Janeiro</option>
+                        <option value="2" >São Paulo</option>
+                        <option value="3">Minas Gerais</option>
+                    </select>
+                </div>
+
+                <div style="float: right; margin-right: 200px;">
+                    <label for="Multi">Multi Seleção:</label><br>
+                    <select id="Multi">
+                        <optgroup label="Frutas">
+                            <option>Abacaxi</option>
+                            <option>Banana</option>
+                            <option selected="">Maçã</option>
+                            </optgroup>
+                        <optgroup label="Cores">
+                            <option>Amarelo</option>
+                            <option>Azul</option>
+                            <option>Verde</option>
+                            <option>Vermelho</option>
+                        </optgroup>
+                        <optgroup label="Países">
+                            <option>Alemanha</option>
+                            <option>Itália</option>
+                            <option>Brasil</option>
+                            <option>Rússia</option>
+                        </optgroup>
+                    </select>
+                </div>
+                  
+                <div style="clear: left;">
+                    <label for="lojas">Escolha:</label>
+                    <input type="text" list="lojas" name="loja" id="loja">
+                    <datalist id="lojas">
+                        <option value="Centauro">Centauro</option>
+                        <option value="Centro Automotivo">Centro Automotivo</option>
+                        <option value="Magazine Luiza">Magazine Luiza</option>
+                        <option value="Magazine Joana" selected="">Magazine Joana</option>
+                        <option value="Farmácia Boa Vida">Farmácia Boa Vida</option>
+                    </datalist>
+                </div>
+
+                <div>
+                    <label for="msg">Sua Mensagem:</label><br>
+                    <textarea id="msg" rows="5" cols="50" placeholder="Escreva uma mensagem foda!"></textarea>
+                </div>
+
+                <input type="range" name="range" min="1" max="100" value="50" id="range" onchange="mostrar_resultado()" style="float: left; margin-top: 10px;">
+                <span id="resultado" style="margin-left: -83px;"></span>
+                <input type="submit" id="botao" value="Login" style="clear: left; margin-bottom: 0px;"/>
+            </form>
+        </main>
+        <script src="../../../../livro/JavaScript/jquery-3.3.1.min.js"></script>
+         <script type="text/javascript">
+            function mostrar_resultado(){
+                //document.getElementById("resultado").innerHTML =  document.getElementById("range").value;
+                $('#resultado').html($('#range').val());
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+
+			#janela { top: 10px; left: 20px; width:200px; height:200px; background-color:#069; margin: 5px; 
+                border: 5px solid black; }
+            #janelinha { top: 10px; left: 10px; width: 50px; height:50px; background-color:#F00; margin: 5px; }
+            
+            html { position: static; }
+            body { position: static; }
+            main { position: static; }
+            div  { position: absolute; }
+
+        </style>
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+
+			$(function(e) {
+				console.log("Janela Top: " + $('div#janela').position().top);
+                console.log("Janela Left: " + $('div#janela').position().left);
+
+                console.log("Janelinha Top: " + $('div#janelinha').position().top);
+                console.log("Janelinha Left: " + $('div#janelinha').position().left);
+
+                //Offset nos dá a posição em relação ao elemento avô.
+                console.log("Janelinha Offset Top: " + $('div#janelinha').offset().top);
+                console.log("Janelinha Offset Left: " + $('div#janelinha').offset().left);                
+			});
+
+		</script>
+    </head>
+    <body>
+        <main>
+            <div id="janela">
+            	<div id="janelinha"></div>
+            </div>
+        </main>
+    </body>
+</html>

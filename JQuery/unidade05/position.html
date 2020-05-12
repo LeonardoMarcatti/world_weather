@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+			#janela {position: static; top:20px; left:50px; width:200px; height:200px; background-color:#069; border:5px solid #000; padding:0 10px;}
+            html {background-color: silver;}
+
+		</style>
+    </head>
+    <body>		
+        <div id="janela"></div>
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+            $(function(e) {
+                console.log("Top: " + $('div#janela').position().top+"px");
+                console.log("Left: " + $('div#janela').position().left+"px");
+            });
+        </script>
+    </body>
+</html>

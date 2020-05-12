@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+    <head>
+        <meta charset="utf-8">
+        <title>Unidade 04 </title>
+        <meta name="author" content="Leonardo Marcatti">
+        <meta name="generator" content="Brackets">
+        <meta name="keywords" content="HTML5, CSS3">
+        <meta name="description" content="Página do curso de HTML5">
+        <meta name="application-name" content="Leo"> 
+        <meta http-equiv="refresh" content="2">
+        <style>
+            body{
+                color: blue;
+                font-family: sans-serif;              
+                font-style: oblique;
+                font-stretch: ultra-expanded;
+                font-size: 30px;
+            }
+        </style>
+        <script>
+            function sorteionumero(){
+                valor = Math.round(Math.random()*100);
+                    if (valor >=50)
+                        {
+                            numero_sorteado.innerHTML = "Maior que 50";
+                            numero_sorteado.innerHeight = 5;
+                            valor_sorteado.innerHTML = "Valor: "+valor;
+                                                        
+                        }
+                else
+                numero_sorteado.innerHTML = "Menor que 50";
+                valor_sorteado.innerHTML = "Valor: " + valor;
+            }
+            window.onload = sorteionumero;
+        </script>
+    </head>
+    <body>
+        <p id="numero_sorteado"></p>
+        <p id="valor_sorteado"></p>
+        <a href="http://www.maujor.com/">Site do Majour</a>
+    </body>
+</html>

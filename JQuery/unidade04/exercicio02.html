@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+			$( function(e) {
+
+                $("h1").html("Inserido um Texto H1");
+                
+                $("ul").prepend("<li><h4>Inserido com prepend</h4></li>");
+                $("ul").append("<li><h4>Inserido com append</h4></li>");
+
+                $("li:nth-child(2)").append("<li><h4>Append no meio da lista</h4></li>");
+
+			} )
+		</script>
+        
+    </head>
+
+    <body>
+    	<h1></h1>
+    
+		<ul id="listacursos">
+            <li>Curso HTML5 Essencial</li>
+            <li>Curso CSS3 Essencial</li>
+            <li>Curso Javascript Essencial</li>
+            <li>Curso jQuery Fundamental</li>
+        </ul>
+
+    </body>
+
+</html>

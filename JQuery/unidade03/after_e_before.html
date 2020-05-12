@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso jQuery Fundamental</title>        
+        <style>
+			body 	{ font-family:Arial, Helvetica, sans-serif; font-size:0.8em; }
+			ul 		{ margin: 15px; padding: 5px; width:200px }
+			li		{ margin-bottom: 5px; list-style-type: none;}
+			li a	{ padding:10px 6px; color:#39C; text-decoration: none;}
+            li a:hover { text-decoration: underline;  color: red;}
+        </style>
+
+		<script src="../jquery-3.3.1.min.js"></script>
+        <script>
+			$( function(e) {
+
+                //$='algo' significa que termina em algo.
+                $("ul li a[href$='.pdf']").after("<img src = 'imagens/icon_pdf.gif'>");
+                $("ul li a[href$='.zip']").before("<img src= imagens/icon_zip.gif>");
+                //$("ul li").css("list-style-image", "url(imagens/icon_pdf.gif)");
+            });
+		</script>
+    </head>
+
+    <body>
+		<ul>
+        	<li><a href="arquivo.zip">Arquivo compactado</a></li>
+            <li><a href="arquivo.zip">Arquivo zipado</a></li>
+            <li><a href="arquivo.pdf">Documento de Texto</a></li>
+            <li><a href="arquivo.pdf">Curriculum Vitae</a></li>
+			<li><a href="arquivo.zip">Arquivo para download</a></li>         
+        </ul>
+    </body>
+</html>

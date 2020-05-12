@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        
+        <style>
+			ul		{ margin:0; padding:0; list-style:none }
+			li		{ display:inline-block; margin-right:10px }
+		</style>
+        
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+			$( function(e) {
+                $("<li><img src='imagem/foto4.jpg'></li>").insertAfter("li:first");
+                $("<li><img src='imagem/foto5.jpg'></li>").insertAfter("li:nth-child(3)");
+                $("<li><img src='imagem/foto6.jpg'></li>").insertBefore("li:nth-child(1)");
+                $("<li><img src='imagem/foto6_grande.jpg'></li>").insertBefore("li:nth-child(1)");
+                $("li:nth-child(1)").css("float", "left");
+                $("body").css("width", "80%").css("margin", " 10px auto");
+
+			})
+		
+		</script>
+        
+    </head>
+
+    <body>
+		<ul>
+        	<li><img src="imagem/foto1.jpg"></li>
+            <li><img src="imagem/foto2.jpg"></li>
+            <li><img src="imagem/foto3.jpg"></li>
+            
+        </ul>
+
+    </body>
+
+</html>

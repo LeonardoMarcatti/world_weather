@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="icon" href="https://pt.seaicons.com/wp-content/uploads/2016/03/Apps-HTML-5-Metro-icon.png" type="image/png" sizes="16x16">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+			body { font-family:Arial, Helvetica, sans-serif; font-size: 0.9em; }
+			li { padding:5px; margin-bottom:1px }
+			.vermelho { color:#F00; }
+			.verde { color:#096; }
+            .azul { color: blue; }
+            .amarelo{ color: yellow; }
+		</style>
+    </head>
+    <body>
+    	<ul>
+            <li class="vermelho">Curso HTML5 Essencial</li>
+            <li class="verde">Curso CSS3 Essencial</li>
+            <li id="texto1">Curso Javascript Essencial</li>
+            <li id="texto2">Curso jQuery Fundamental</li>
+            <li class="azul">Classe azul</li>
+            <li class="amarelo">Classe amarelo</li>
+            <li id="texto3">ID texto3</li>
+            <li id="texto4">ID texto4</li>              
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script>
+			$( function(e) {
+				$("ul li").css("background-color", "yellow");
+                $("ul li[class]").css("background-color", "silver");
+                $("ul li[class = amarelo]").css("background-color", "green");
+                $("ul li[id = texto2]:contains('jQuery')").css("background-color", "gray");
+                $("ul li.azul").css("font-size", "20px");
+                $("ul li#texto3").css("background-color", "purple").css("color", "white");
+            });
+		</script>
+    </body>
+</html>

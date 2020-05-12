@@ -1,0 +1,46 @@
+<!DOCTYPE = html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Aulas de Javascript</title>
+        <script>
+            var salada = ["Uva","Banana","Pera"];
+            
+            console.log(salada);
+            console.log("Elemento 0: " + salada[0]);
+            console.log("Último elemento: " + salada[(salada.length -1)]);
+            console.log("Número de elementos no array: " + salada.length);
+
+            //Adicionar elemento no final.
+            salada.push("Mamão");
+            console.log(salada);
+            console.log("Elemento 0: " + salada[0]);
+            console.log("Último elemento: " + salada[(salada.length -1)]);
+            console.log("Número de elementos no array: " + salada.length);
+
+            //Adicionar elemento no início.
+            salada.unshift(3);
+            console.log(salada);
+            console.log("Elemento 0: " + salada[0]);
+            console.log("Último elemento: " + salada[(salada.length -1)]);
+            console.log("Número de elementos no array: " + salada.length);
+
+            //Exclui o último elemento do array.
+            salada.pop();
+            console.log(salada);
+            console.log("Elemento 0: " + salada[0]);
+            console.log("Último elemento: " + salada[(salada.length -1)]);
+            console.log("Número de elementos no array: " + salada.length);
+
+            //Exclui primeiro elemento do array.
+            salada.shift();
+            console.log(salada);
+            console.log("Elemento 0: " + salada[0]);
+            console.log("Último elemento: " + salada[(salada.length -1)]);
+            console.log("Número de elementos no array: " + salada.length);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

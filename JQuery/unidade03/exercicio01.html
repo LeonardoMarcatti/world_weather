@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+        
+        <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+        <script>
+
+            /*
+			function inicial() {
+                alert("Página carregada com sucesso")
+            }
+            
+            window.onload = inicial;
+            */
+
+            //O mesmo código acima fica da seguinte forma:
+
+            //Forma normal.
+            jQuery(document).ready(function(e) {
+                alert("OK");
+            })
+
+            //Forma simplificada
+            $(function (e) {
+                alert("OK 2");
+            })
+
+            //Em ambos os casos o alert só será mostrado após todo o conteúdo do body for carregado.
+            
+
+		</script>
+    </head>
+
+    <body>
+	  
+    </body>
+</html>

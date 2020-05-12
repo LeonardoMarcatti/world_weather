@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style type="text/css"></style>
+    </head>
+    <body>
+    	<h1>Teste</h1>
+        <h1 class=teste></h1>    
+		<ul id="listacursos">
+            <li>Curso HTML5 Essencial</li>
+            <li>Curso CSS3 Essencial</li>
+            <li>Curso Javascript Essencial</li>
+            <li>Curso jQuery Fundamental</li>
+        </ul>
+        <input type="button" name="Mudar" id="Mudar" value="Mudar Fonte" >
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+            $(function(e){
+
+                $("h1.teste").html("Inserido com jQuery");
+                $("ul").prepend("<li><b>Inserido com prepend</b></li>");
+                $("ul").append("<li><b>Inserido com append</b></li>");
+                $("li:nth-child(3)").append("<li><b>Append no meio da lista</b></li>");
+
+                function mudar_fonte() {
+                    $('head').html('<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">');
+                    $('h1').css('font-family', 'Pacifico, cursive');
+                };
+                
+                $('input#Mudar').click(mudar_fonte);
+            });
+        </script>
+    </body>
+</html>

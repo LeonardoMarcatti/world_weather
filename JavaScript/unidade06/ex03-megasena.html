@@ -1,0 +1,31 @@
+<!DOCTYPE = html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Aulas de Javascript</title>
+        <script>
+        	var sorteio;
+        	var mega = new Array();
+
+        	for (var i = 0; i <= 5; i++) {
+        		sorteio = (Math.ceil(Math.random()*60).toFixed(0));                
+        		if (mega.indexOf (sorteio) == -1){
+        			mega[i] = sorteio;
+        		} else{
+        			i--;
+        		}
+        	}
+
+        	function ordenar(a,b) {
+        		return a-b;
+        	}
+
+        	console.log("Desordenados:\n" + mega);
+        	mega.sort(ordenar);
+        	console.log("Ordenados:\n" + mega);
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

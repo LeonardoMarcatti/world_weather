@@ -8,7 +8,8 @@ $.ajax({
             $('tbody').append('<tr>');
             $('tbody tr').eq(i).append(`<td> ${e.people[i].name}`);
             $('tbody tr').eq(i).append(`<td> ${e.people[i].craft}`);
-        }
+        };
+        console.log(e);
     }
 });
 
@@ -18,7 +19,7 @@ async function image() {
     return astro;
 };
 image()
-.then(astro => {for(let i = 0; i < astro.people.length; i++){
+.then(astro => {for(let i = 0; i < astro.number; i++){
     setTimeout(() => {
        console.log(astro.people[i]);
         

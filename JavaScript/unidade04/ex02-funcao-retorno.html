@@ -1,0 +1,55 @@
+<!DOCTYPE = html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Aulas de Javascript</title>
+        <script>
+            var farenheit = converter(30);
+        	function converter(c) {
+        		var f = (c*1.8)+32;
+        		return f;
+        	}
+
+            alert(farenheit + "°F");
+            
+
+            //Uma função pode ser chamada antes mesmo de ser declarada;
+            var area = calcular(5,2,2)[0];
+            var volume = calcular(5,2,2)[1];
+
+            alert("Área: "+calcular(5,2,2)[0]+"cm²");
+            alert("Volume: "+volume+"cm³"); 
+
+            function calcular(a,b,c) {
+                var a1 = a*b;
+                var v1 = a*b*c;
+                var valores = [a1, v1];
+                return valores;
+            }
+
+
+            //Expressão de função são anônimas. Só podem ser chamadas após o interpretador a encontrar.
+            var teste = function(argumento1, argumento2) {
+                return argumento1+argumento2;
+            }
+
+            alert(teste("Expressão de ", "Função!"));
+
+            function soma(a,b) {
+                    return a+b;
+              };
+
+            function cal(v1, v2, f) {
+              if (f == 'soma') {
+                  alert(soma(v1, v2));
+              } else{
+                  alert('False');
+              };
+            };
+
+            cal(3,4, 'e');
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

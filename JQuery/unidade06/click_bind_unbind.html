@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+            $(function (e) {
+                /*$('#cursohtml').click(function() {
+                    mostrarMensagem_HTML5();
+                });*/
+
+                //bind faz uma ligação entre um evento e uma ação.
+                /*$('#cursocss').bind('click', function() {
+                    alert("Voce clicou no botão Curso CSS3");
+                });*/ 
+                    
+                $('#cursocss').bind('click', mostrarMensagem_CSS3);
+                $('#cursohtml').click(mostrarMensagem_HTML5);
+
+                $('#unbind_html5').bind('click', unbind_html5);
+                
+                $('#bind_html5').click(function() {
+                    bind_html5();
+                });
+                $('#unbind_css3').click(function() {
+                    unbind_css3();
+                });
+                $('#bind_css3').click(function() {
+                    bind_css3();
+                });
+
+
+                function mostrarMensagem_CSS3() {
+                    alert("Voce clicou no botão Curso CSS3");
+                };
+                function mostrarMensagem_HTML5() {
+                    alert("Voce clicou no botão Curso HTML 5");
+                };
+                function unbind_html5() {
+                    $('#cursohtml').attr('disabled', 'disabled');
+                    $('#bind_html5').removeAttr('disabled');
+                    $('#unbind_html5').attr('disabled', 'disabled');
+                    $('#cursohtml').unbind('click', mostrarMensagem_HTML5);
+                };
+                function bind_html5() {
+                    $('#cursohtml').removeAttr('disabled');
+                    $('#bind_html5').attr('disabled', 'disabled');
+                    $('#unbind_html5').removeAttr('disabled');
+                    $('#cursohtml').bind('click', mostrarMensagem_HTML5);
+                };
+                function unbind_css3() {
+                    $('#cursocss').attr('disabled', 'disabled');
+                    $('#bind_css3').removeAttr('disabled');
+                    $('#unbind_css3').attr('disabled', 'disabled');
+                    $('#cursocss').unbind('click', mostrarMensagem_CSS3);
+                };
+                function bind_css3() {
+                    $('#cursocss').removeAttr('disabled');
+                    $('#cursocss').bind('click', mostrarMensagem_CSS3);
+                    $('#bind_css3').attr('disabled', 'disabled');
+                    $('#unbind_css3').removeAttr('disabled');
+                };
+            });
+		</script>
+    </head>
+
+    <body>
+        <input type="button" id="cursohtml" value="Curso HTML5">
+        <input type="button" id="cursocss" 	value="Curso CSS3">
+        <p></p>
+        <input type="button" name="bind_html5" id="bind_html5" value="bind_html5" disabled="">
+        <input type="button" name="unbind_html5" id="unbind_html5" value="unbind_html5">
+        <input type="button" name="bind_css3" id="bind_css3" value="bind_css3" disabled="">
+        <input type="button" name="unbind_css3" id="unbind_css3" value="unbind_css3">
+    </body>
+
+</html>

@@ -1,0 +1,6 @@
+[30-Jan-2019 20:25:14 America/Sao_Paulo] PHP Notice:  Undefined offset: 6 in /var/www/html/programacao/curso/PHP/unidade_07/loops.php on line 30
+[30-Jan-2019 20:25:14 America/Sao_Paulo] PHP Stack trace:
+[30-Jan-2019 20:25:14 America/Sao_Paulo] PHP   1. {main}() /var/www/html/programacao/curso/PHP/unidade_07/loops.php:0
+[30-Jan-2019 20:29:31 America/Sao_Paulo] PHP Notice:  Undefined offset: 6 in /var/www/html/programacao/curso/PHP/unidade_07/loops.php on line 30
+[30-Jan-2019 20:29:31 America/Sao_Paulo] PHP Stack trace:
+[30-Jan-2019 20:29:31 America/Sao_Paulo] PHP   1. {main}() /var/www/html/programacao/curso/PHP/unidade_07/loops.php:0
