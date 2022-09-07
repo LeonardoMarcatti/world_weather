@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="icon" href="https://phproberto.gallerycdn.vsassets.io/extensions/phproberto/vscode-php-getters-setters/1.2.3/1525759974843/Microsoft.VisualStudio.Services.Icons.Default" type="image/gif" sizes="16x16">
-        <link rel="stylesheet" href="CSS/world_weather.css">
-        <title>World Weather</title>    
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/html5-40-1175193.png" type="image/png" sizes="16x16">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/ec29234e56.js" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="JS/world_weather.js" defer></script>
+    <link rel="stylesheet" href="CSS/world_weather.css">
+    <title>World Weather</title>    
+  </head>
     <body>
-        <header class="col-12">
-            <h1><u>World Weather</u><sup><small>TM</small></sup></h1>
-            <h3>Your weather forecast site!</h3>
-        </header>
-        <form id="form" class="col-lg-3 col-md-3 col-sm-12">
-            <div class="form-group">
-                <label for="city" class="col-form-label">Where?</label>
-                <input type="text" id="city" name="city" placeholder="Ex.: London" class="form-control">
+      <header class="container-fluid">
+        <h1><u>World Weather</u><sup><small>TM</small></sup></h1>
+        <h3>Your weather forecast site!</h3>
+      </header>
+      <main class="container-fluid">
+        <div class="col-4">
+          <form id="form">
+            <div class="mb-3">
+              <label for="city" class="col-form-label">Where?</label>
+              <input type="text" id="city" name="city" placeholder="Ex.: London" class="form-control">
             </div>
-            <button class="btn btn-warning" id="check">Check it out!</button>
-        </form>
-        <div id="data" class="col-lg-8 col-md-8 col-sm-12"></div>
-            
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="JS/world_weather.js"></script>
+            <div class="mb-3">
+              <button class="btn btn-success" id="check">Check it out!</button>
+            </div>
+          </form>
+        </div>        
+        <div id="data" class="col-7"></div>
+      </main>
+      <footer>
+        <small>Feito por Leonardo Marcatti com CSS Grid, Flexbox, Bootstrap5 e JQuery</small>
+      </footer>
     </body>
 </html>

@@ -24,7 +24,9 @@ $('#check').on('click',
                     <i class="fas fa-temperature-low fa-2x"> Temperature: ${response.list[0].main.temp}C°</i><br>
                     <i class="fas fa-tint fa-2x"> Humidity: ${response.list[0].main.humidity}%</i><br>
                     <i class="fas fa-city fa-2x"> ${response.list[0].weather[0].main}/${response.list[0].weather[0].description}</i><br>`                    
-                ).css('background-image', `url(${imagem})`);
+                ).css('background-image', `url(${imagem})`).css('display', 'inline-block');
+                $('#data i').css('font-size', '18px').css('text-shadow', '0px 0px 10px black');
+                $('#data h3').css('text-shadow', '0px 0px 10px black');
             }
         })
     }, 500);
